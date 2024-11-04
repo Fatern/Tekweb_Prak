@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Pages</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <!-- Tailwind -->
+    <link href="./src/output.css" rel="stylesheet">
+    <!-- Alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="py-8 px-11">
+            <div class="container mx-auto">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <img src="./Public/img/Logo.svg" alt="Logo">
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex justify-center space-x-9 flex-grow">
+                        <a href="#" class="font-poppins text-black text-bd">Home</a>
+                        <a href="#" class="hover:font-poppins">Features</a>
+                        <a href="#" class="hover:font-poppins">About Us</a>
+                    </div>
+                    <div class="hidden md:flex justify-end">
+                        <a href="#" class="border border-blue-500 text-blue-500 px-4 py-2 rounded-full hover:bg-blue-50">About App</a>
+                    </div>
+                    <!-- Dropdown Button (Always Visible) -->
+                    <div class="md:hidden" x-data="{ open: false }" class="relative">
+                        <button @click="open = !open" class="focus:outline-none">
+                            <img src="./Public/img/radix-icons_hamburger-menu.svg" alt="Menu Icon" class="w-9 h-8 rounded-lg border-2 border-biru">
+                        </button>
+                        
+                        <!-- Dropdown Content (Aligned to the right, opens to the left) -->
+                        <div x-show="open" x-transition @click.away="open = false" 
+                            class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-2">
+                            <a href="#" class="font-poppins block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+                            <a href="#" class="font-poppins block px-4 py-2 text-gray-700 hover:bg-gray-100">Features</a>
+                            <a href="#" class="font-poppins block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="flex flex-col md:flex-row justify-between py-12 md:py-24">
+        <!-- Left Section -->
+        <div class="max-w-lg space-y-4 text-center md:text-left px-11">
+                <h1 class="font-poppins text-6xl font-bold text-gray-800 leading-tight">
+                    Manage Schedule and Task Easy
+                </h1>
+                <p class="font-poppins text-gray-600">
+                    Create and organize schedule and task deadline become better, easy manage and certainly no longer lagging behind schedule of activities and task
+                </p>
+                <button class="font-poppins bg-biru text-white px-6 py-3 rounded-full hover:bg-blue-600">
+                    Download App
+                </button>
+        </div>
+        <!-- Right Section -->
+        <div class="mt-12 md:mt-0">
+            <div class="relative">
+                <img class="max-w-lg mx-auto w-full h-auto" src="./Public/img/Hero Image.svg" alt="App preview">
+            </div>
+        </div>
+    </main>
+    <!-- Features Section -->
+    <section class="px-6 py-12">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <!-- Feature 1 -->
+                <div>
+                    <img src="./Public/img/uim_schedule.svg" alt="Icon" class="mx-auto mb-4 w-12 h-12">
+                    <h3 class="font-poppins text-xl font-semibold">Set a better deadline tasks</h3>
+                    <p class="font-poppins text-gray-600">You can make your duty deadlines better and more orderly</p>
+                </div>
+                <!-- Feature 2 -->
+                <div>
+                    <img src="./Public/img/uim_layer-group.svg" alt="Icon" class="mx-auto mb-4 w-12 h-12">
+                    <h3 class="font-poppins text-xl font-semibold">Manage the tasks so easily</h3>
+                    <p class="font-poppins text-gray-600">You can manage the deadlines and the schedule becomes easy</p>
+                </div>
+                <!-- Feature 3 -->
+                <div>
+                    <img src="./Public/img/ri_notification-fill.svg" alt="Icon" class="mx-auto mb-4 w-12 h-12">
+                    <h3 class="font-poppins text-xl font-semibold">Wouldn’t miss notifications</h3>
+                    <p class="font-poppins text-gray-600">Of course you will always get the tasks and schedule notifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task Setup Section -->
+    <section class="flex flex-col md:flex-row justify-between items-center px-0 py-12">
+        <!-- Image Section -->
+        <div class="mb-8 md:mb-0 md:w-1/2 flex justify-start">
+            <img src="./Public/img/Image.svg" alt="Task Setup" class="w-full max-w-md">
+        </div>
+        <!-- Text Section -->
+        <div class="md:w-1/2 text-center md:text-left px-6">
+            <h2 class="font-poppins text-3xl font-bold mb-4">Set up task and schedule with a best features</h2>
+            <p class="font-poppins text-gray-600">
+                The best feature makes you better, with the latest technology to meet your needs. Of course, with such features as organizing schedules and leading assignments, it will make you easier, So get the application now !
+            </p>
+        </div>
+    </section>
+
+    <!-- Notification Section -->
+    <section class="flex flex-col md:flex-row justify-between items-center px-0 py-12">
+        <!-- Text Section -->
+        <div class="md:w-1/2 text-center md:text-left px-6">
+            <h2 class="font-poppins text-3xl font-bold mb-4">Get the highest priority application notification</h2>
+            <p class="font-poppins text-gray-600 mb-8">The best feature makes you better, with the latest technology to meet your needs. Of course, with such features as organizing schedules and leading assignments, it will make you easier, So get the application now !</p>
+        </div>
+        <!-- Image Section -->
+        <div class="flex justify-end w-full h-auto">
+            <img src="./Public/img/Image (1).svg" alt="Notification Feature" class="w-full max-w-md">
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+<div class="container mx-auto bg-biru text-white text-center py-0 rounded-2xl relative h-64 md:h-auto">
+    <section>
+        <!-- Gambar -->
+        <img src="./Public/img/Mask Group.svg" alt="" class="w-full h-auto object-cover rounded-2xl opacity-70">
+        
+        <!-- Teks dan Tombol Overlay -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center p-6">
+            <h2 class="font-poppins text-3xl font-bold mb-4">Download an app now and the various benefits you will get immediately</h2>
+            <div class="mt-6 flex space-x-4">
+                <button class="font-poppins bg-white text-biru px-6 py-3 rounded-full hover:bg-gray-100">Download App</button>
+                <button class="font-poppins border-2 border-white px-6 py-3 rounded-full hover:bg-blue-600">About App</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+    <!-- Testimonials Section -->
+    <section class="py-12 flex flex-col md:flex-row items-center justify-between bg-gray-50">
+        <!-- Left Section with Full Cover Image -->
+        <div class="relative w-full md:w-1/2 max-w-lg mx-auto md:mx-0 bg-blue-100 rounded-r-xl overflow-hidden h-64 md:h-auto">
+            <img src="./Public/img/Testimonial Img.svg" alt="Cover Image" class="w-full h-full object-cover object-left">
+        </div>
+
+        <!-- Text Section -->
+        <div class="md:w-1/2 text-center md:text-left pl-6">
+            <h2 class="font-poppins text-3xl font-bold mb-4">What do they think</h2>
+            <img src="./Public/img/Profile.svg" alt="" class="mx-2 my-4">
+            <h2></h2>
+            <p class="font-poppins text-gray-600">
+                “ Hi, it’s Samantha. After using it made me a lot of benefits, starting with convenience of setting a deadline of tasks and schedule after that the app is very simple using. “
+            </p>
+            <img src="./Public/img/Slider.svg" alt="" class=" mx-2 my-3">
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-gray-50 py-10">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6 text-gray-700">
+        
+        <!-- Logo and Description -->
+        <div>
+            <img src="./Public/img/Logo.svg" alt="logo" class="flex items-center space-x-2">
+            
+            </img>
+            <p class="font-poppins mt-4 text-sm">Task deadlines and scheduling applications with various benefits and advantages</p>
+        </div>
+
+        <!-- Sitemaps Section -->
+        <div>
+            <h3 class="font-poppinst text-lg font-semibold">Sitemaps</h3>
+            <ul class="mt-4 space-y-2 text-sm">
+                <li><a href="#home" class="font-poppins  hover:text-biru underline">Home</a></li>
+                <li><a href="#features" class="font-poppins  hover:text-biru underline">Features</a></li>
+                <li><a href="#about" class=" font-poppins  hover:text-biru underline">About Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Advantages Section -->
+        <div>
+            <h3 class="font-poppinstext-lg font-semibold">Advantages</h3>
+            <ul class="mt-4 space-y-2 text-sm">
+                <li><a href="#" class="font-poppins  hover:text-biru underline">Set Task Better</a></li>
+                <li><a href="#" class="font-poppins  hover:text-biru underline">Easy Manage</a></li>
+                <li><a href="#" class="font-poppins  hover:text-biru underline">Get Notification</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div>
+            <h3 class="font-poppins text-lg font-semibold">Follow Us</h3>
+            <div class="flex space-x-4 mt-4">
+                <!-- Tempat ikon media sosial (SVG atau img) -->
+                <a href="https://facebook.com" target="_blank" class="text-biru">
+                    <img src="./Public/img/uim_facebook-f.svg" alt="">
+                </a>
+                <a href="https://twitter.com" target="_blank" class="text-biru">
+                    <img src="./Public/img/uim_twitter.svg" alt="">
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-biru">
+                    <img src="./Public/img/uim_linkedin-alt.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
